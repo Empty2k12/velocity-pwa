@@ -85,7 +85,8 @@
       "ALREADY_BOOKED": "You already booked one bicycle",
       "NO_PEDELEC_AVAILABLE": "There is currently no e-bike available at this station.",
       "STATION_LOAD": "Sorry. We could not load the stations",
-      "STATION_DETAILS": "Sorry. We have been unable to load station details."
+      "STATION_DETAILS": "Sorry. We have been unable to load station details.",
+      "RUNNING_TRANSACTION_LOAD": "Sorry. We have been unable to load your open booking."
     },
     "POPUP": {
       "STATES": {
@@ -175,6 +176,9 @@
         "PRICE": "Travel costs",
         "NO_TRANS_AVAILABLE": "No further transactions available"
       }
+    },
+    "OFFEN": {
+      "TITEL": "Current Transaction"
     }
   },
   "TARIFF": {

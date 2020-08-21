@@ -86,7 +86,8 @@
       "ALREADY_BOOKED": "Reservierung liegt bereits vor",
       "NO_PEDELEC_AVAILABLE": "Es steht kein freies Pedelec zur Verfügung",
       "STATION_LOAD": "Entschuldigung! Die Stationen konnten nicht geladen werden",
-      "STATION_DETAILS": "Entschuldigung! Die Detailinfos der Station konnten nicht geladen werden"
+      "STATION_DETAILS": "Entschuldigung! Die Detailinfos der Station konnten nicht geladen werden",
+      "RUNNING_TRANSACTION_LOAD": "Entschuldigung! Die laufende Buchung konnte nicht geladen werden"
     },
     "POPUP": {
       "STATES": {
@@ -176,6 +177,9 @@
         "PRICE": "Fahrtkosten",
         "NO_TRANS_AVAILABLE": "Keine (weiteren) Fahrten vorhanden"
       }
+    },
+    "OFFEN": {
+      "TITEL": "Aktuelle Transaktion"
     }
   },
   "TARIFF": {

@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { Map, Marker, TileLayer } from "react-leaflet";
 
 import { useCachedViewport } from "../../hooks/map";
+import { useRunningTransaction } from "../../hooks/running-transaction";
 import { useStations } from "../../hooks/stations";
 import { TILE_URL } from "../../model/urls";
 import logoGreyscale from "../../resources/logo-greyscale.png";
@@ -13,6 +14,9 @@ import MakeLazy from "../util/make-lazy";
 import "./bike-map.scss";
 
 const RentPopup = MakeLazy(() => import("./rent-popup"));
+const RunningTransactionPopup = MakeLazy(() =>
+  import("./running-transaction-popup"),
+);
 
 interface BikeMapProps {
   className?: string;
@@ -39,6 +43,7 @@ const BikeMap: React.FC<BikeMapProps> = ({ className, isLoggedIn }) => {
   const [viewport, handleViewportChange] = useCachedViewport();
   const [selectedStation, setSelectedStation] = useState<number | null>(null);
   const { stations } = useStations();
+  const { runningTransaction } = useRunningTransaction();
 
   const handleHashChange = useCallback(() => {
     const stationId = window.location.hash.substr(1);
@@ -103,6 +108,11 @@ const BikeMap: React.FC<BikeMapProps> = ({ className, isLoggedIn }) => {
           ))}
         </Map>
       )}
+
+      <RunningTransactionPopup
+        onRequestClose={closePopup}
+        runningTransaction={runningTransaction}
+      />
 
       <RentPopup
         isLoggedIn={isLoggedIn}

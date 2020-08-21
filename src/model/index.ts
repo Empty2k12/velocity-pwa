@@ -102,6 +102,8 @@ export interface Tariff {
 export interface RunningTransaction {
   fromStation: StationSimple;
   lockAvailable: boolean;
+  lockClosed: boolean;
+  requiresLockClosingByUser: boolean;
   pedelecName: string;
   startDateTime: string;
   transactionId: number;
